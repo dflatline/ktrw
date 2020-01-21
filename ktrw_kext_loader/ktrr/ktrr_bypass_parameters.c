@@ -125,6 +125,23 @@ parameters__iphone10_1__17B102() {
 	ADDRESS(CpuDataEntries)     = SLIDE(0xFFFFFFF0091CACB8);
 }
 
+static void
+parameters__iphone10_1__17C54() {
+    gPhysBase                   = kernel_read64(SLIDE(0xFFFFFFF00790AB68));
+    gVirtBase                   = kernel_read64(SLIDE(0xFFFFFFF00790AB70));
+    rorgn_begin                 = kernel_read64(SLIDE(0xFFFFFFF00790AE58));
+    rorgn_end                   = kernel_read64(SLIDE(0xFFFFFFF00790AE60));
+    cpu_ttep                    = kernel_read64(SLIDE(0xFFFFFFF00790A7C0));
+    kernel_pmap                 = kernel_read64(SLIDE(0xFFFFFFF00790A7A0));
+    ADDRESS(pmap_find_phys)     = SLIDE(0xFFFFFFF007CCBDAC);
+    ADDRESS(ml_phys_read_data)  = SLIDE(0xFFFFFFF007CD83EC);
+    ADDRESS(ml_phys_write_data) = SLIDE(0xFFFFFFF007CD8690);
+    ADDRESS(ml_io_map)          = SLIDE(0xFFFFFFF007CDDD44);
+    ADDRESS(ldr_w0_x0__ret)     = SLIDE(0xFFFFFFF007BDAF34);
+    ADDRESS(str_w1_x0__ret)     = SLIDE(0xFFFFFFF007BDAFB8);
+    ADDRESS(CpuDataEntries)     = SLIDE(0xFFFFFFF0091D2C98);
+}
+
 static struct platform_initialization parameters[] = {
 	{ "iPhone10,1",            "16C101", parameters__iphone10_1__16C101 },
 	{ "iPhone10,6",            "16E227", parameters__iphone10_6__16E227 },

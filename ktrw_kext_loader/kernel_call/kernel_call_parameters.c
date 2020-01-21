@@ -93,6 +93,12 @@ addresses__iphone10_1__17B102() {
 	ADDRESS(IORegistryEntry__getRegistryEntryID) = SLIDE(0xFFFFFFF0080FFDE0);
 }
 
+static void
+addresses__iphone10_1__17C54() {
+    ADDRESS(IOUserClient__vtable)                = SLIDE(0xFFFFFFF007920CD8);
+    ADDRESS(IORegistryEntry__getRegistryEntryID) = SLIDE(0xFFFFFFF00810696C);
+}
+
 static struct platform_initialization addresses[] = {
 	{ "iPhone10,1",            "16C101", addresses__iphone10_1__16C101 },
 	{ "iPhone10,6",            "16E227", addresses__iphone10_6__16E227 },

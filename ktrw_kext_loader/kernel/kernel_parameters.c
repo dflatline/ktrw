@@ -84,6 +84,11 @@ addresses__iphone10_1__17B102() {
 	STATIC_ADDRESS(allproc) = 0xFFFFFFF0091E6C50;
 }
 
+static void
+addresses__iphone10_1__17C54() {
+    STATIC_ADDRESS(allproc) = 0xFFFFFFF0091EEC30;
+}
+
 static struct platform_initialization addresses[] = {
 	{ "iPhone10,1",            "16C101", addresses__iphone10_1__16C101 },
 	{ "iPhone10,6",            "16E227", addresses__iphone10_6__16E227 },
